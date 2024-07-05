@@ -1,5 +1,5 @@
-# OPL-Game-Database-Project
-OPL Game Database Project 
+# OPL-Games-Infos-Database-Project
+OPL Game Infos Database Project
 
 Multiple databases from various sites.
 
