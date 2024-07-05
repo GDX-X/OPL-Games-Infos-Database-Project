@@ -3,9 +3,9 @@ OPL Game Infos Database Project
 
 Multiple databases from various sites.
 
-[Redump (Only for game Title)](http://redump.org/)
+[Redump.org](http://redump.org/) (Only for game Title)
 
-[PSXDatacenter](https://psxdatacenter.com)
+[PSXDatacenter.com](https://psxdatacenter.com)
 
-[ScreenScrapper](https://www.screenscraper.fr)
+[ScreenScrapper.fr](https://www.screenscraper.fr)
  
