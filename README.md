@@ -11,7 +11,7 @@ Multiple databases from various sites.
 
 # About the database
 ### About Ranking
-Contains all the information with the ranking for each region
+Each region has its own classification
 - PAL = PEGI
 - NTSC-U = ESRB
 - NTSC-J = CERO
@@ -21,7 +21,7 @@ Contains all the information with the ranking for each region
 - (Note that not all game titles are translated)
 
 ### About Release Date
-- Each region has its own release date and each month and translated
+- Each region has its own release date and each month translated
 
 ### About Descriptions
 - Each description is translated into its own languages. NOTE if the descriptions are in English for a different language, it means there are no descriptions in that language, so by default English will be used.
