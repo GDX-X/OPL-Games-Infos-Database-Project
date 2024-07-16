@@ -15,7 +15,7 @@ Each region has its own classification
 - PAL = PEGI
 - NTSC-U = ESRB
 - NTSC-J = CERO
-- 
+
 ### About Title
 - Each region has its own game title
 - (Note that not all game titles are translated)
