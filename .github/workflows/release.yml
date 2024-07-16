@@ -22,7 +22,7 @@ jobs:
         DATEE=`date '+[%Y-%m-%d]'`
         echo "----OPL-Games-Infos-Database-Project----">hash.txt
         echo Commit $SCH>>hash.txt
-        7z a -t7z -r OPL-Games-Infos-Database-Project.zip *
+        7z a -t7z -r OPL-Games-Infos-Database-Project.7z *
     
     - name: Upload artifacts
       if: ${{ success() }}
@@ -30,7 +30,7 @@ jobs:
       with:
         name: OPL-Games-Infos-Database-Project-${{ steps.slug.outputs.sha8 }}
         path: |
-             OPL-Games-Infos-Database-Project.zip
+             OPL-Games-Infos-Database-Project.7z
     
     - name: delete previous tag/release
       if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
@@ -48,7 +48,7 @@ jobs:
         token: "${{ secrets.GITHUB_TOKEN }}"
         fail_on_unmatched_files: true
         files: |
-             OPL-Games-Infos-Database-Project.zip
+             OPL-Games-Infos-Database-Project.7z
         name: "Latest OPL-Games-Infos-Database-Project"
         tag_name: "Latest"
         prerelease: true
