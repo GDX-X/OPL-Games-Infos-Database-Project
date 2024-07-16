@@ -1,27 +1,28 @@
-name: Release  OPL-Games-Infos-Database-Project
+name: Release OPL-Games-Infos-Database-Project
+
 on:
   workflow_dispatch:
   repository_dispatch:
   push:
-  
+
 jobs:
   Repack_and_Release:
     runs-on: ubuntu-latest
     steps:
 
-    - name: checkout code for release
+    - name: Checkout code for release
       uses: actions/checkout@v2
       
     - name: Get short SHA
       id: slug
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
       
-    - name: zip Folder For Release
+    - name: Zip folder for release
       run: |
         SCH=${GITHUB_SHA::7}
-        DATEE=`date '+[%Y-%m-%d]'`
-        echo "----OPL-Games-Infos-Database-Project----">hash.txt
-        echo Commit $SCH>>hash.txt
+        DATEE=$(date '+[%Y-%m-%d]')
+        echo "----OPL-Games-Infos-Database-Project----" > hash.txt
+        echo "Commit $SCH" >> hash.txt
         7z a -t7z -r OPL-Games-Infos-Database-Project.7z *
     
     - name: Upload artifacts
@@ -29,27 +30,24 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: OPL-Games-Infos-Database-Project-${{ steps.slug.outputs.sha8 }}
-        path: |
-             OPL-Games-Infos-Database-Project.7z
+        path: OPL-Games-Infos-Database-Project.7z
     
-    - name: delete previous tag/release
-      if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+    - name: Delete previous tag/release
+      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
       uses: dev-drprasad/delete-tag-and-release@v0.2.1
       with:
         delete_release: true
         tag_name: Latest
       env:
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Deploy pre-release
       uses: softprops/action-gh-release@v1
-      if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
+      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
       with:
-        token: "${{ secrets.GITHUB_TOKEN }}"
+        token: ${{ secrets.GITHUB_TOKEN }}
         fail_on_unmatched_files: true
-        files: |
-             OPL-Games-Infos-Database-Project.7z
+        files: OPL-Games-Infos-Database-Project.7z
         name: "Latest OPL-Games-Infos-Database-Project"
         tag_name: "Latest"
         prerelease: true
-    
