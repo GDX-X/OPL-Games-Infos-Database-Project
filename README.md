@@ -45,3 +45,6 @@ Aspect=aspect/
 Vmode=vmode/
 Rating=
 ```
+# Credit
+- It was initially designed for Open PS2 Loader, but you can use it for any PS2 project.
+- If you would like to use this file on one of your projects, please consider crediting me.
