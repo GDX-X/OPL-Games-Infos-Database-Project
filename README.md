@@ -1,9 +1,10 @@
 # OPL-Games-Infos-Database-Project
-OPL Game Infos Database Project
 
-Multiple databases from various sites.
+This project was originally created to be used with [PFS2 HDD Manager](https://github.com/GDX-X/PFS2-HDD-Manager)
 
-[Redump.info](http://redump.info/) (Only for game Title)
+The database was built using various sites, notably
+
+[Redump.info](http://redump.info/)
 
 [PSXDatacenter.com](https://psxdatacenter.com)
 
