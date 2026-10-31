@@ -3,7 +3,7 @@ OPL Game Infos Database Project
 
 Multiple databases from various sites.
 
-[Redump.org](http://redump.org/) (Only for game Title)
+[Redump.info](http://redump.info/) (Only for game Title)
 
 [PSXDatacenter.com](https://psxdatacenter.com)
 
@@ -30,7 +30,6 @@ Each region has its own classification
 - The text was truncated to 255 characters. Since the truncated text might have hanging sentences, the resulting text is further trimmed to the last period.
 ```
 Title=
-Serial=
 Region=
 Release=
 Developer=
